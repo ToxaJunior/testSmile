@@ -1,0 +1,12 @@
+/web/bundles/
+/var/cache/
+/var/logs/
+/var/sessions/
+/app/store
+/app/config/parameters.yml
+/vendor/
+/composer.phar
+/web/app/
+/src/**/*~
+/app/backups
+/docker

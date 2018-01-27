@@ -1,0 +1,21 @@
+<form action="{{ path('import') }}" enctype="multipart/form-data" method="post" name="test">
+    <p><input type="file" name="import_csv">
+        <input type="submit" value="Send"></p>
+</form>
+{% if error is defined %}
+    {{ error }}
+{% endif %}
+<table>
+    <tr>
+        <th>Product name</th>
+        <th>Qty</th>
+        <th>Warehouses</th>
+    </tr>
+    {% for row in availableProducts %}
+    <tr>
+        <td>{{ row.product.name }}</td>
+        <td>{{ row.quantity }}</td>
+        <td>{{ row.warehouse.name }}</td>
+    </tr>
+    {% endfor %}
+</table>
